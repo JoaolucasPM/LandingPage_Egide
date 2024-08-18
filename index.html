@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Égide</title>
+
+    <!-- ANIMAÇÃO DO TEXTO -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <!--  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.1/css/boxicons.min.css">
+    <!-- ROLAGEM -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script  nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="assets/JS/script.js"></script>
+</head>
+<body>
+    <main>
+        <aside id="menu">
+            <div class="SideImg">
+                <img src="assets/IMG/Logo.png" alt="">
+                <p>@techEgide</p>
+            </div>
+            <ul class="Links">
+                <li onclick="Navigate(0)" class="activeLink">
+                    <ion-icon id="p-link" name="home-outline"></ion-icon>
+                    <p class="identificador">Home</p>
+                </li>
+                <li onclick="Navigate(3)">
+                    <ion-icon name="mail-unread-outline"></ion-icon>
+                    <p class="identificador">Contact Me</p>
+                </li>
+            </ul>
+        </aside>
+        
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Primeiro Slide -->
+                <div class="swiper-slide home-slide">
+                    <div class="HomeContent">
+                        <h1>Olá! Eu sou a <span class="stylized-name">Égide</span>,</h1>
+                        <h2>sua desenvolvedora de <span class="proffesions typed" data-typed-items="Landing Pages, sites, projetos web"></span></h2>
+                        <p class="heroline">
+                            Com paixão por <span class="proffesions">tecnologia</span>, meu objetivo é gerar <span class="proffesions">valor</span> para o seu negócio, oferecendo soluções web inovadoras e eficientes.
+                        </p>
+                        <div class="buttonGroup">
+                            <button> 
+                                <a href="https://wa.me/5534997763785" target="_blank">Entrar em contato</a>
+                            </button>
+                        </div>
+                    </div>
+           
+                </div>
+        
+                <!-- Segundo Slide -->
+ 
+
+                <!-- Terceiro Slide -->
+                <div id="contato" class="swiper-slide">
+                    <div class="HomeContent">
+                        <h1>Entre em contato</h1>
+                        <p class="heroline">
+                            Se você tem um projeto em mente ou quer saber mais sobre nossos serviços, entre em contato conosco. Estamos prontos para ajudar!
+                        </p>
+                        <div class="buttonGroup">
+                            <button> 
+                                <a href="https://wa.me/5534997763785" target="_blank">Entrar em contato</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Setas de Navegação -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <!-- Barra de Rolagem -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </main>
+
+
+</body>
+</html>

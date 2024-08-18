@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Layout Principal */
+main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+/* Menu Lateral */
+aside {
+    width: 200px;
+    padding: 5px;
+    height: 100%;
+    background-color: #212529;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+}
+
+.SideImg {
+    width: 50%;
+    margin: 40px auto;
+}
+
+.SideImg img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.Links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50%;
+}
+
+aside li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 0.2s;
+}
+
+aside li:hover {
+    color: #80ed99;
+}
+
+aside li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to left, transparent, #ffffff24, transparent);
+    bottom: 0;
+    left: 0;
+}
+
+aside li i {
+    font-size: 1.3rem;
+}
+
+#p-link {
+    height: 150%;
+    padding: 5px;
+}
+
+.activeLink {
+    color: #80ed99;
+}
+
+/* Swiper */
+.mySwiper {
+    flex: 1;
+    height: 100%;
+    background-color: #000000;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+/* Conteúdo do Slide */
+.HomeContent {
+    margin: auto 0;
+    flex: 1;
+    padding: 100px;
+    color: white;
+}
+
+.HomeContent h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.HomeContent h1 .stylized-name {
+    color: #80ed99;
+}
+
+.HomeContent h2 {
+    font-size: 2.3em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.proffesions {
+    color: #85f69f;
+}
+
+h2 span {
+    color: #fff;
+    padding-bottom: 3px;
+    letter-spacing: 1px;
+    border-bottom: 3.4px solid #80ed99;
+}
+
+.HomeContent .heroline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-right: 50px;
+}
+
+.buttonGroup {
+    display: flex;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.buttonGroup button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #1d8637;
+    color: white;
+    border-radius: 5px;
+}
+
+.slide-help {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+/* Estilos Gerais */
+p {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    aside {
+        width: auto;
+        transition: width 0.1s ease;
+    }
+
+    .identificador, .SideImg, .SideImg img {
+        display: none;
+    }
+}
+
+/* Estilização personalizada do Swiper */
+.swiper-button-next, .swiper-button-prev {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff; /* Aqui define a cor das setas como branco */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-scrollbar {
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 5px;
+}
+
+.swiper-scrollbar-drag {
+    background-color: #dfdfdf;
+}
