@@ -188,11 +188,22 @@ a {
         width: auto;
         transition: width 0.1s ease;
     }
+    .buttonGroup button {
+        font-size: 1rem;
+    }
+    .HomeContent h1 {
+        font-size: 1.8em;
 
+    }
+    .HomeContent h2 {
+        font-size: 1.2rem;
+    }
     .identificador, .SideImg, .SideImg img {
         display: none;
     }
-}
+    .HomeContent .heroline {
+        font-size: 1rem;
+}   }
 
 /* Estilização personalizada do Swiper */
 .swiper-button-next, .swiper-button-prev {
