@@ -1,6 +1,8 @@
 :root {
     --FontColor-Principal: #BC0AB8;
     --Font: "Poppins", sans-serif;
+    --Color-princial: #fff;
+    --Color-darkMenu: #13053F
 }
 
 /* Reset */
@@ -8,12 +10,18 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 
 /* Corpo */
 body {
     height: 100vh;
     font-family: var(--Font);
+    
+}
+
+#setas{
+    color: var(--FontColor-Principal);
 }
 
 /* Layout Principal */
@@ -28,7 +36,7 @@ aside {
     width: 200px;
     padding: 5px;
     height: 100%;
-    background-color: #212529;
+    background-color: var(--Color-darkMenu);
     backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
@@ -38,6 +46,11 @@ aside {
 .SideImg {
     width: 50%;
     margin: 40px auto;
+}
+
+#link{
+    
+    width: 50px;
 }
 
 .SideImg img {
@@ -58,7 +71,7 @@ aside li {
     align-items: center;
     padding: 20px;
     gap: 10px;
-    color: white;
+    color: var(--Color-princial);
     cursor: pointer;
     position: relative;
     transition-duration: 0.2s;
@@ -83,8 +96,10 @@ aside li i {
 }
 
 #p-link {
-    height: 150%;
     padding: 5px;
+    width: 20px;
+    height: 25px;
+   
 }
 
 .activeLink {
@@ -112,7 +127,8 @@ aside li i {
     margin: auto;
     flex: 1;
     padding: 100px;
-    color: white;
+    color: var(--Color-princial);
+
 }
 
 .HomeContent h1 {
@@ -133,10 +149,11 @@ aside li i {
 
 .proffesions {
     color: var(--FontColor-Principal);
+    font-weight: 500;
 }
 
 h2 span {
-    color: #fff;
+    color: var(--Color-princial);
     padding-bottom: 3px;
     letter-spacing: 1px;
     border-bottom: 3.4px solid var(--FontColor-Principal);
@@ -163,7 +180,7 @@ h2 span {
     margin: 5px;
     cursor: pointer;
     background-color: var(--FontColor-Principal);
-    color: white;
+    color: var(--Color-princial);
     border-radius: 5px;
 }
 
@@ -178,28 +195,33 @@ h2 span {
 
 /* Estilos Gerais */
 p {
-    color: #fff;
+    color: var(--Color-princial);
+
 }
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: var(--Color-princial);
+
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     aside {
-        width: 70px;
+        width: 80px;
         transition: width 0.1s ease;
     }
-
-
     .buttonGroup button {
         font-size: 1rem;
     }
-
+    ul{
+        display: flex;
+        position: relative;
+        top: 30vh;
+    }
     .HomeContent h1 {
         font-size: 1.8em;
+        
     }
 
     .HomeContent h2 {
@@ -210,16 +232,27 @@ a {
     .SideImg,
     .SideImg img {
         display: none;
+        
     }
 
-    .swiper-button-next, .swiper-button-prev {
+    .swiper-button-next,
+    .swiper-button-prev {
         width: 40px;
         height: 40px;
     }
+
     .HomeContent {
-   
-
+        flex: 1;
+        margin: 30% auto;
         padding: 30px;
+        text-align: justify;
 
+    }
+    #p-link {
+        
+        width: 50px;
+        height: 50px;
+    ;
+       
     }
 }
