@@ -65,7 +65,7 @@ aside li {
 }
 
 aside li:hover {
-    color: #80ed99;
+    color: var(--FontColor-Principal)
 }
 
 aside li::after {
@@ -88,7 +88,7 @@ aside li i {
 }
 
 .activeLink {
-    color: #80ed99;
+    color: var(--FontColor-Principal);
 }
 
 /* Swiper */
