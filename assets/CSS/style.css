@@ -109,7 +109,7 @@ aside li i {
 
 /* Conteúdo do Slide */
 .HomeContent {
-    margin: auto 0;
+    margin: auto;
     flex: 1;
     padding: 100px;
     color: white;
@@ -193,6 +193,7 @@ a {
         transition: width 0.1s ease;
     }
 
+
     .buttonGroup button {
         font-size: 1rem;
     }
@@ -214,5 +215,11 @@ a {
     .swiper-button-next, .swiper-button-prev {
         width: 40px;
         height: 40px;
+    }
+    .HomeContent {
+   
+
+        padding: 30px;
+
     }
 }
