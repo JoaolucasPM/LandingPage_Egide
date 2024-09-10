@@ -1,8 +1,16 @@
 :root {
     --FontColor-Principal: #BC0AB8;
     --Font: "Poppins", sans-serif;
+    --FontWeightLinks: 500;
+    --FontWeightText: 700;
+
+    --FontSizeLinks: 1.4rem;
+    --FontSizeText: 3rem;
+    --FontSizeTextSub: 3rem;
     --Color-princial: #fff;
-    --Color-darkMenu: #13053F
+    --Color-darkMenu: #13053F;
+    --Color-darkMain: #010003;
+
 }
 
 /* Reset */
@@ -20,37 +28,22 @@ body {
 
 }
 
-p {
-    font-weight: 600;
-
-}
-
-#setas {
-    color: var(--FontColor-Principal);
-}
-
-/* Layout Principal */
-main {
-    display: flex;
-    height: 100%;
-    width: 100%;
-}
-
 /* Menu Lateral */
 aside {
-    width: 200px;
+    width: 300px;
     padding: 5px;
-    height: 100%;
+    height: 100vh;
     background-color: var(--Color-darkMenu);
     backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
-    font-size: 1.1rem;
+    font-size: var(--FontSizeLinks);
+    font-weight: var(--FontWeightLinks);
     transition: width 0.5s ease;
 }
 
-#profile_logo {
-    height: 60px;
+.profile_logoColorido{
+    width: 50px;
 }
 
 .SideImg {
@@ -58,16 +51,24 @@ aside {
     margin: 40px auto;
 }
 
-#link {
-
-    width: 50px;
-}
-
 .SideImg img {
     width: 100%;
     max-width: 100%;
     height: auto;
 }
+
+.page_Instagram{
+    display: flex;
+    justify-content: center;
+    font-size: var(--FontSizeLinks);
+    font-weight: var(--FontWeightLinks);
+}
+
+.page_Instagram:hover{
+    color: var(--FontColor-Principal);
+    transition:  0.2s ease;
+}
+
 
 .Links {
     display: flex;
@@ -85,11 +86,11 @@ aside li {
     cursor: pointer;
     position: relative;
     transition:  0.5s ease;
-
 }
 
-aside li:hover {
-    color: var(--FontColor-Principal)
+aside li:hover, aside li p:hover {
+    color: var(--FontColor-Principal);
+    transition:  0.2s ease;
 }
 
 aside li::after {
@@ -102,26 +103,27 @@ aside li::after {
     left: 0;
 }
 
-aside li i {
-    font-size: 1.3rem;
-}
-
 #p-link {
     padding: 5px;
     width: 20px;
     height: 25px;
-
 }
 
-.activeLink {
-    color: var(--FontColor-Principal);
+p {
+    font-weight: var(--FontWeightLinks);
+    font-size: var(--FontSizeLinks);
 }
+
+/* ----------------------------------------- */
+
+/* Pagina conteudo */
+
 
 /* Swiper */
 .mySwiper {
     flex: 1;
-    height: 100%;
-    background-color: #000000;
+    min-height: 100vh;
+
 }
 
 .swiper-slide {
@@ -130,22 +132,23 @@ aside li i {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: #000000;
+    background-color: var(--Color-darkMain);
 }
 
-/* Conteúdo do Slide */
+
 .HomeContent {
     margin: auto;
     flex: 1;
-    padding: 100px;
+    padding: 40px;
     color: var(--Color-princial);
 
 }
 
 .HomeContent h1 {
-    font-size: 3em;
-    font-weight: 700;
+    font-size: var(--FontSizeText);
+    font-weight: var(--FontWeightText);
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .HomeContent h1 .stylized-name {
@@ -153,15 +156,50 @@ aside li i {
 }
 
 .HomeContent h2 {
-    font-size: 2.3em;
-    margin-bottom: 10px;
-    font-weight: 600;
+    gap: 50%;
+    padding-top:3rem;
+    padding-bottom:3rem;
+
+    font-size: var(--FontSizeTextSub);
+    font-weight: var(--FontWeightText);
+}
+
+#setas {
+    color: var(--FontColor-Principal);
+}
+
+/* Layout Principal */
+main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+
+.profile_logo {
+    height: 60px;
+}
+
+
+#link {
+    width: 50px;
 }
 
 .proffesions {
     color: var(--FontColor-Principal);
-    font-weight: 500;
+    font-weight: var(--FontWeightText);
 }
+
+
+.activeLink {
+    color: var(--FontColor-Principal);
+}
+
+
+
+
+
+
 
 h2 span {
     color: var(--Color-princial);
@@ -171,13 +209,16 @@ h2 span {
 }
 
 .heroline {
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: 2rem;
+    font-weight: var(--FontWeightLinks);
     padding-right: 50px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 a {
-    font-weight: 500;
+    font-weight: var(--FontWeightLinks);
+    font-size: var(--FontSizeLinks);
 
 }
 
@@ -185,6 +226,8 @@ a {
     display: flex;
     padding: 10px 0;
     margin-top: 10px;
+    justify-content: right;
+    
 }
 
 .buttonGroup button {
@@ -233,9 +276,16 @@ a {
         width: 80px;
         transition: width 0.5s ease;
     }
-
+    .profile_logoColorido{
+        width: 40px;
+    }
     .buttonGroup button {
         font-size: 1rem;
+        justify-content: center;
+    }
+    .buttonGroup {
+  
+        justify-content: center;
     }
 
     ul {
@@ -250,7 +300,10 @@ a {
     }
 
     .HomeContent h2 {
+        padding-top:3rem;
+        padding-bottom:3rem;
         font-size: 1.5rem;
+        text-align: left;
     }
 
     .identificador,
@@ -265,7 +318,9 @@ a {
         width: 40px;
         height: 40px;
     }
-
+    .heroline{
+        font-size: 1.5rem;
+    }
     .HomeContent {
         flex: 1;
         margin: 10% auto;
